@@ -231,7 +231,7 @@ class ObjMesh:
 
         materials = {"": default_mtl}
 
-        mtl_path = os.path.splitext(model_file)[0] + ".mtl"
+        mtl_path = os.path.join(model_dir, file_name.split(".")[0] + ".mtl")
 
         if not os.path.exists(mtl_path):
             return materials
